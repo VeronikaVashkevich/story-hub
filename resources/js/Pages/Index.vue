@@ -1,9 +1,9 @@
 <template>
-    
+    <div>sdfsdfdsfsd</div>
 </template>
 
 <script>
 export default {
-    name: 'Index'
+    name: 'Index',
 }
 </script>

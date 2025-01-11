@@ -7,7 +7,7 @@ import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
 
 const form = useForm({
-    name: '',
+    login: '',
     email: '',
     password: '',
     password_confirmation: '',
@@ -26,41 +26,44 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="name" value="Name" />
+                <InputLabel for="login" value="Логин" />
 
                 <TextInput
-                    id="name"
+                    id="login"
+                    name="login"
                     type="text"
                     class="mt-1 block w-full"
-                    v-model="form.name"
+                    v-model="form.login"
                     required
                     autofocus
-                    autocomplete="name"
+                    autocomplete="login"
                 />
 
-                <InputError class="mt-2" :message="form.errors.name" />
+                <InputError class="mt-2" :message="form.errors.login" />
             </div>
 
             <div class="mt-4">
-                <InputLabel for="email" value="Email" />
+                <InputLabel for="email" value="Электронная почта" />
 
                 <TextInput
                     id="email"
+                    name="email"
                     type="email"
                     class="mt-1 block w-full"
                     v-model="form.email"
                     required
-                    autocomplete="username"
+                    autocomplete="email"
                 />
 
                 <InputError class="mt-2" :message="form.errors.email" />
             </div>
 
             <div class="mt-4">
-                <InputLabel for="password" value="Password" />
+                <InputLabel for="password" value="Пароль" />
 
                 <TextInput
                     id="password"
+                    name="password"
                     type="password"
                     class="mt-1 block w-full"
                     v-model="form.password"
@@ -74,11 +77,12 @@ const submit = () => {
             <div class="mt-4">
                 <InputLabel
                     for="password_confirmation"
-                    value="Confirm Password"
+                    value="Подтвердите пароль"
                 />
 
                 <TextInput
                     id="password_confirmation"
+                    name="password_confirmation"
                     type="password"
                     class="mt-1 block w-full"
                     v-model="form.password_confirmation"
@@ -97,7 +101,7 @@ const submit = () => {
                     :href="route('login')"
                     class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
-                    Already registered?
+                    Уже есть аккаунт?
                 </Link>
 
                 <PrimaryButton
@@ -105,7 +109,7 @@ const submit = () => {
                     :class="{ 'opacity-25': form.processing }"
                     :disabled="form.processing"
                 >
-                    Register
+                    Зарегистрироваться
                 </PrimaryButton>
             </div>
         </form>
