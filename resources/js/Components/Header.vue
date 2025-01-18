@@ -1,7 +1,9 @@
 <template>
     <header class="flex align-middle justify-between my-2">
         <div class="">
-            <img src="@img/logo-light.svg" alt="Logo">
+            <Link :href="route('index')">
+                <img src="@img/logo-light.svg" alt="Logo">
+            </Link>
         </div>
         <NavList/>
     </header>
@@ -9,12 +11,14 @@
 
 <script>
 import NavList from '@/Components/NavList.vue';
+import { Link } from '@inertiajs/vue3';
 
 export default {
     name: 'Header',
 
     components: {
-        NavList
+        NavList,
+        Link
     }
 }
 </script>
