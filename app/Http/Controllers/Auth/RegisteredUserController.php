@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\UserAuthorized;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
@@ -45,6 +46,7 @@ class RegisteredUserController extends Controller
         $user->assignRole('writer');
 
         event(new Registered($user));
+        event(new UserAuthorized($user));
 
         Auth::login($user);
 
