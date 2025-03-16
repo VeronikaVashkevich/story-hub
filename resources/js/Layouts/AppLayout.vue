@@ -9,7 +9,7 @@
 import Header from "@/Components/Header.vue";
 
 export default {
-  name: "AppLayouts",
+  name: "AppLayout",
 
   components: {
     Header,

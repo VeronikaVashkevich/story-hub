@@ -9,6 +9,9 @@
                 <Link :href="route('register')">Регистрация</Link>
             </li>
             <li v-if="$page.props.auth.user">
+                <Link :href="route('profile.index')">Мой профиль</Link>
+            </li>
+            <li v-if="$page.props.auth.user">
                 <Link @click="logout">Выйти</Link>
             </li>
         </ul>
