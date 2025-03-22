@@ -47,7 +47,7 @@ export default {
       type: String,
       default: '',
     },
-    labels: {
+    tags: {
       type: Object,
       default: {},
     },
@@ -124,8 +124,8 @@ export default {
       <div class="flex flex-row">
         <span>Метки:</span>
         <span class="ml-2">
-          <a href="#" v-for="(label, lIndex) in labels"
-            >{{ label }}<span v-if="lIndex !== labels.length - 1">, </span></a
+          <a href="#" v-for="(tag, lIndex) in tags"
+            >{{ tag }}<span v-if="lIndex !== tags.length - 1">, </span></a
           >
         </span>
       </div>

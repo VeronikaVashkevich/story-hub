@@ -21,7 +21,7 @@ export default {
       pages="23"
       size="maxi"
       :characters="['Jack', 'Nelly']"
-      :labels="['Алкоголь', 'Курение']"
+      :tags="['Алкоголь', 'Курение']"
     />
   </div>
 </template>
