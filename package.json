@@ -19,6 +19,7 @@
         "vue": "^3.4.0"
     },
     "dependencies": {
-        "prettier": "^3.5.3"
+        "prettier": "^3.5.3",
+        "sass": "^1.86.0"
     }
 }
