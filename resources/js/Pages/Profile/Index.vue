@@ -1,15 +1,13 @@
 <script>
-import UserProfileLayout from "@/Layouts/UserProfileLayout.vue";
+import UserProfileLayout from '@/Layouts/UserProfileLayout.vue';
 
 export default {
-    components: {
-        UserProfileLayout
-    },
+  components: {
+    UserProfileLayout,
+  },
 
-    layout: UserProfileLayout
-}
+  layout: UserProfileLayout,
+};
 </script>
 
-<template>
-
-</template>
+<template></template>

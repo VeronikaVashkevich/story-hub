@@ -1,15 +1,15 @@
 <template>
   <div class="container mx-auto">
     <Header></Header>
-    <slot/>
+    <slot />
   </div>
 </template>
 
 <script>
-import Header from "@/Components/Header.vue";
+import Header from '@/Components/Header/Header.vue';
 
 export default {
-  name: "AppLayout",
+  name: 'AppLayout',
 
   components: {
     Header,

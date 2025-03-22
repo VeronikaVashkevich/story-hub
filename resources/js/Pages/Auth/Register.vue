@@ -7,111 +7,105 @@ import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
 
 const form = useForm({
-    login: '',
-    email: '',
-    password: '',
-    password_confirmation: '',
+  login: '',
+  email: '',
+  password: '',
+  password_confirmation: '',
 });
 
 const submit = () => {
-    form.post(route('register'), {
-        onFinish: () => form.reset('password', 'password_confirmation'),
-    });
+  form.post(route('register'), {
+    onFinish: () => form.reset('password', 'password_confirmation'),
+  });
 };
 </script>
 
 <template>
-    <GuestLayout>
-        <Head title="Register" />
+  <GuestLayout>
+    <Head title="Register" />
 
-        <form @submit.prevent="submit">
-            <div>
-                <InputLabel for="login" value="Логин" />
+    <form @submit.prevent="submit">
+      <div>
+        <InputLabel for="login" value="Логин" />
 
-                <TextInput
-                    id="login"
-                    name="login"
-                    type="text"
-                    class="mt-1 block w-full"
-                    v-model="form.login"
-                    required
-                    autofocus
-                    autocomplete="login"
-                />
+        <TextInput
+          id="login"
+          name="login"
+          type="text"
+          class="mt-1 block w-full"
+          v-model="form.login"
+          required
+          autofocus
+          autocomplete="login"
+        />
 
-                <InputError class="mt-2" :message="form.errors.login" />
-            </div>
+        <InputError class="mt-2" :message="form.errors.login" />
+      </div>
 
-            <div class="mt-4">
-                <InputLabel for="email" value="Электронная почта" />
+      <div class="mt-4">
+        <InputLabel for="email" value="Электронная почта" />
 
-                <TextInput
-                    id="email"
-                    name="email"
-                    type="email"
-                    class="mt-1 block w-full"
-                    v-model="form.email"
-                    required
-                    autocomplete="email"
-                />
+        <TextInput
+          id="email"
+          name="email"
+          type="email"
+          class="mt-1 block w-full"
+          v-model="form.email"
+          required
+          autocomplete="email"
+        />
 
-                <InputError class="mt-2" :message="form.errors.email" />
-            </div>
+        <InputError class="mt-2" :message="form.errors.email" />
+      </div>
 
-            <div class="mt-4">
-                <InputLabel for="password" value="Пароль" />
+      <div class="mt-4">
+        <InputLabel for="password" value="Пароль" />
 
-                <TextInput
-                    id="password"
-                    name="password"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password"
-                    required
-                    autocomplete="new-password"
-                />
+        <TextInput
+          id="password"
+          name="password"
+          type="password"
+          class="mt-1 block w-full"
+          v-model="form.password"
+          required
+          autocomplete="new-password"
+        />
 
-                <InputError class="mt-2" :message="form.errors.password" />
-            </div>
+        <InputError class="mt-2" :message="form.errors.password" />
+      </div>
 
-            <div class="mt-4">
-                <InputLabel
-                    for="password_confirmation"
-                    value="Подтвердите пароль"
-                />
+      <div class="mt-4">
+        <InputLabel for="password_confirmation" value="Подтвердите пароль" />
 
-                <TextInput
-                    id="password_confirmation"
-                    name="password_confirmation"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password_confirmation"
-                    required
-                    autocomplete="new-password"
-                />
+        <TextInput
+          id="password_confirmation"
+          name="password_confirmation"
+          type="password"
+          class="mt-1 block w-full"
+          v-model="form.password_confirmation"
+          required
+          autocomplete="new-password"
+        />
 
-                <InputError
-                    class="mt-2"
-                    :message="form.errors.password_confirmation"
-                />
-            </div>
+        <InputError class="mt-2" :message="form.errors.password_confirmation" />
+      </div>
 
-            <div class="mt-4 flex items-center justify-end">
-                <Link
-                    :href="route('login')"
-                    class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                    Уже есть аккаунт?
-                </Link>
+      <div class="mt-4 flex items-center justify-end">
+        <Link
+          :href="route('login')"
+          class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        >
+          Уже есть аккаунт?
+        </Link>
 
-                <PrimaryButton
-                    class="ms-4"
-                    :class="{ 'opacity-25': form.processing }"
-                    :disabled="form.processing"
-                >
-                    Зарегистрироваться
-                </PrimaryButton>
-            </div>
-        </form>
-    </GuestLayout>
+        <PrimaryButton
+          class="ms-4"
+          :class="{ 'opacity-25': form.processing }"
+          :disabled="form.processing"
+        >
+          Зарегистрироваться
+        </PrimaryButton>
+      </div>
+    </form>
+  </GuestLayout>
 </template>
