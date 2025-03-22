@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Fandom;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +19,7 @@ class CharacterFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
+            'fandom_id' => Fandom::factory(),
         ];
     }
 }
