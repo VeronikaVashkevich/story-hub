@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-col text-xl border-2 px-12 py-2 rounded-md">
+  <div class="flex flex-col text-xl border-2 px-6 py-2 rounded-md pb-2 h-max">
     <LeftNavbarItem :link="route('profile.index')" label="Мои истории" />
     <LeftNavbarItem
       :link="route('profile.index')"
