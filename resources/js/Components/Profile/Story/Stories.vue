@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-col ml-5 w-[846px]">
+  <div class="flex flex-col w-[846px]">
     <Story
       v-for="story in stories"
       :name="story.name"
