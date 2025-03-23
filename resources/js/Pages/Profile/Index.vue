@@ -1,6 +1,6 @@
 <script>
 import UserProfileLayout from '@/Layouts/UserProfileLayout.vue';
-import Stories from "@/Components/Profile/Story/Stories.vue";
+import Stories from '@/Components/Profile/Story/Stories.vue';
 
 export default {
   components: {
@@ -8,10 +8,14 @@ export default {
     Stories,
   },
 
+  props: {
+    stories: Array,
+  },
+
   layout: UserProfileLayout,
 };
 </script>
 
 <template>
-  <Stories/>
+  <Stories :stories="stories" />
 </template>

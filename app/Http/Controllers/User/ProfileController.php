@@ -9,6 +9,12 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Profile/Index');
+        $stories = auth()->user()
+            ->stories()
+            ->with('characters')
+            ->with('tags')
+            ->get();
+
+        return Inertia::render('Profile/Index', compact('stories'));
     }
 }

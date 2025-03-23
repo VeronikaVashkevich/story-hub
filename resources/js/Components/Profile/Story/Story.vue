@@ -108,7 +108,7 @@ export default {
         <span>Персонажи:</span>
         <span class="ml-2">
           <a href="#" v-for="(character, chIndex) in characters"
-            >{{ character
+            >{{ character.name
             }}<span v-if="chIndex !== characters.length - 1">, </span></a
           >
         </span>
@@ -125,7 +125,7 @@ export default {
         <span>Метки:</span>
         <span class="ml-2">
           <a href="#" v-for="(tag, lIndex) in tags"
-            >{{ tag }}<span v-if="lIndex !== tags.length - 1">, </span></a
+            >{{ tag.name }}<span v-if="lIndex !== tags.length - 1">, </span></a
           >
         </span>
       </div>
