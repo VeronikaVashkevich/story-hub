@@ -9,6 +9,11 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
-        @yield('content')
+    <div class="container mx-auto">
+        @include('components.header')
+        <div class="mt-4">
+            @yield('content')
+        </div>
+    </div>
     </body>
 </html>
