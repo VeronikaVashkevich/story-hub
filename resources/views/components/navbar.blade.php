@@ -3,7 +3,7 @@
         <li>{{ __('titles.stories') }}</li>
         @auth()
             <li>
-                <a href="#">{{ __('titles.profile') }}</a>
+                <a href="{{ route('profile.index') }}">{{ __('titles.profile') }}</a>
             </li>
             <li>
                 <form action="{{ route('logout') }}" method="post">

@@ -17,4 +17,10 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::post('/logout', LogoutController::class)->name('logout');
+
+    Route::prefix('profile')
+        ->name('profile.')
+        ->group(function () {
+        Route::get('', [\App\Http\Controllers\Profile\IndexController::class, 'index'])->name('index');
+    });
 });

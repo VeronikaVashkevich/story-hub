@@ -8,11 +8,11 @@ class UserMenuFactory extends MenuFactory
     {
         $menu = new Menu;
 
-        //        $menu->add($this->createMenuItem(
-        //            title: 'Мои истории',
-        //            route: 'profile.stories.index',
-        //            icon: ''
-        //        ));
+        $menu->add($this->createMenuItem(
+            title: __('profile.my_stories'),
+            route: 'profile.index',
+            icon: 'book'
+        ));
 
         return $menu;
     }
