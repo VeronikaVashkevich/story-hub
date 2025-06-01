@@ -39,4 +39,9 @@ class Story extends Model
     {
         return $this->hasMany(Like::class);
     }
+
+    public function characters(): BelongsToMany
+    {
+        return $this->belongsToMany(Character::class);
+    }
 }

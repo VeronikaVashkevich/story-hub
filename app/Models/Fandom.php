@@ -16,4 +16,9 @@ class Fandom extends Model
     {
         return $this->hasMany(Story::class);
     }
+
+    public function characters(): HasMany
+    {
+        return $this->hasMany(Character::class);
+    }
 }
