@@ -21,6 +21,6 @@ Route::middleware('auth')->group(function () {
     Route::prefix('profile')
         ->name('profile.')
         ->group(function () {
-        Route::get('', [\App\Http\Controllers\Profile\IndexController::class, 'index'])->name('index');
-    });
+            Route::get('', [\App\Http\Controllers\Profile\IndexController::class, 'index'])->name('index');
+        });
 });

@@ -8,11 +8,11 @@ class GuestMenuFactory extends MenuFactory
     {
         $menu = new Menu;
 
-        //        $menu->add($this->createMenuItem(
-        //            title: 'Истории',
-        //            route: 'index',
-        //            icon: ''
-        //        ));
+        $menu->add($this->createMenuItem(
+            title: 'Истории',
+            route: 'index',
+            icon: 'book'
+        ));
 
         return $menu;
     }
