@@ -13,7 +13,7 @@
 <div class="container mx-auto">
     @include('components.header')
     <div class="mt-4 flex">
-        @include('components.left_menu.menu')
+        <x-left-menu/>
         <div class="ml-3">
             @yield('content')
         </div>
