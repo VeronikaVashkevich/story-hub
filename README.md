@@ -9,6 +9,31 @@ Run
 composer install
 npm install
 php artisan key:generate
+php artisan migrate
+```
+
+## Database Factories
+
+The project uses Laravel factories to generate test data.  
+The factories are located in `database/factories/`.
+
+### Available factories:
+- `UserFactory` – user generation
+- `FandomFactory` – generation of fandom
+
+### Launching factories
+
+#### Via Laravel Tinker
+
+```bash
+php artisan tinker
+```
+
+Examples:
+
+```php
+use App\Models\Fandom
+Fandom::factory()->count(5)->create();
 ```
 
 ## Start
