@@ -5,9 +5,22 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+@font-face {
+    font-family: Geologica;
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("../fonts/Geologica-VariableFont_CRSV,SHRP,slnt,wght.ttf") format("woff2");
+}
+
+@layer base {
+    html {
+        font-family: "Geologica", sans-serif;
+    }
+}
+
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Geologica', ui-sans-serif, system-ui, sans-serif;
 }
 
 .nav-list > * {
