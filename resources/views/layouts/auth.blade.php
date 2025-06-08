@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="container mx-auto">
-    @include('components.header')
+    <x-header/>
     <div class="mt-4">
         @yield('content')
     </div>

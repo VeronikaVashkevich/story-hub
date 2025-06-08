@@ -4,5 +4,5 @@
             <img src="{{ Vite::asset('resources/images/logo-light.svg') }}" alt="Logo"/>
         </a>
     </div>
-    @include('components.navbar')
+    <x-navbar/>
 </header>
