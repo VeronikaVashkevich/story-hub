@@ -21,6 +21,7 @@ The factories are located in `database/factories/`.
 - `UserFactory` – user generation
 - `FandomFactory` – generation of fandom
 - `TagFactory` – generation of tag
+- `CharacterFactory` – generation of character
 
 ### Launching factories
 
@@ -35,6 +36,23 @@ Examples:
 ```php
 use App\Models\Fandom
 Fandom::factory()->count(5)->create();
+```
+
+##### Usage of CharacterFactory:
+
+```php
+// Randomly generates character with fandom_id or with null (60% id, 40% null)
+Character::factory()->create(); 
+
+// Generates character random with fandom_id
+Character::factory()->withFandom()->create(); 
+
+// Generates character without fandom_id
+Character::factory()->withoutFandom()->create(); 
+
+// Generate 5 characters with fandom and 5 without one
+Character::factory()->count(5)->withFandom()->create();
+Character::factory()->count(5)->withoutFandom()->create();
 ```
 
 ## Start
