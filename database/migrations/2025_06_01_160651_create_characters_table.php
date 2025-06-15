@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('characters', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('fandom_id')->constrained()->onDelete('cascade');
+            $table->foreignId('fandom_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

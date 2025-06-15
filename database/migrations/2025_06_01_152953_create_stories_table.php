@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('stories', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('fandom_id')->constrained();
+            $table->foreignId('fandom_id')->nullable()->constrained()->cascadeOnDelete();
             $table->string('type', 4);
             $table->string('name');
             $table->text('description');
