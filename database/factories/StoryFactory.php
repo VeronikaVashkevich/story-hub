@@ -25,7 +25,6 @@ class StoryFactory extends Factory
     public function definition(): array
     {
         $type = $this->faker->randomElement([StoryType::ORIGINAL, StoryType::FANFIC]);
-        $user = User::query()->inRandomOrder()->first() ?? User::factory()->create();
 
         return [
             'user_id' => User::factory(),

@@ -28,7 +28,6 @@ class CharacterFactory extends Factory
 
     /**
      * Create character with fandom
-     * @return Factory
      */
     public function withFandom(): Factory
     {
@@ -41,7 +40,6 @@ class CharacterFactory extends Factory
 
     /**
      * Create character without fandom
-     * @return Factory
      */
     public function withoutFandom(): Factory
     {
