@@ -22,6 +22,7 @@ The factories are located in `database/factories/`.
 - `FandomFactory` – generation of fandom
 - `TagFactory` – generation of tag
 - `CharacterFactory` – generation of character
+- `StoryFactory` – generation of story
 
 ### Launching factories
 
