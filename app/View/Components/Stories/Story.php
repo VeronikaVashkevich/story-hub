@@ -17,18 +17,18 @@ use Illuminate\View\Component;
 class Story extends Component
 {
     public function __construct(
-        public StoryType      $type,
-        public string         $name,
-        public string         $description,
-        public StoryStatus    $status,
+        public StoryType $type,
+        public string $name,
+        public string $description,
+        public StoryStatus $status,
         public StoryDirection $direction,
-        public StoryRating    $rating,
-        public StorySize         $size,
-        public string|null    $cover = '',
-        public Fandom|null    $fandom,
-        public Collection     $tags,
-        public Collection     $characters,
-        public User           $author,
+        public StoryRating $rating,
+        public StorySize $size,
+        public ?string $cover,
+        public ?Fandom $fandom,
+        public Collection $tags,
+        public Collection $characters,
+        public User $author,
     ) {}
 
     public function render(): View|Closure|string
