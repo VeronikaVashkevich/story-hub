@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
-use App\Enums\Direction;
-use App\Enums\Rating;
+use App\Enums\StoryDirection;
+use App\Enums\StoryRating;
 use App\Enums\StorySize;
 use App\Enums\StoryStatus;
 use App\Enums\StoryType;
@@ -33,8 +33,8 @@ class StoryFactory extends Factory
             'name' => $this->faker->sentence($this->faker->numberBetween(1, 3)),
             'description' => $this->faker->paragraph(),
             'status' => $this->faker->randomElement(StoryStatus::cases())->value,
-            'direction' => $this->faker->randomElement(Direction::cases())->value,
-            'rating' => $this->faker->randomElement(Rating::cases())->value,
+            'direction' => $this->faker->randomElement(StoryDirection::cases())->value,
+            'rating' => $this->faker->randomElement(StoryRating::cases())->value,
             'size' => $this->faker->randomElement(StorySize::cases())->value,
             'cover' => $this->faker->optional()->imageUrl(),
         ];

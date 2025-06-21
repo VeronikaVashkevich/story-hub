@@ -1,0 +1,14 @@
+.story-status--ip,
+.story-direction--gen {
+    @apply text-yellow-500;
+}
+
+.story-status--cp,
+.story-direction--get {
+    @apply text-green-500;
+}
+
+.story-status--fz,
+.story-direction--slash {
+    @apply text-sky-500;
+}

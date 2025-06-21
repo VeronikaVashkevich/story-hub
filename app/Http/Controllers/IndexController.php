@@ -2,10 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Story;
+
 class IndexController extends Controller
 {
     public function __invoke()
     {
-        return view('index');
+        $stories = Story::query()
+            ->with([
+                'user',
+                'fandom',
+                'characters',
+                'tags',
+            ])
+            ->paginate(10);
+
+        return view('index', compact('stories'));
     }
 }
