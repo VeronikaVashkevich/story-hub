@@ -11,6 +11,12 @@
     </div>
     <div class="flex flex-col text-lg mt-2">
         <div class="flex flex-row">
+            <span>{{ __('texts.story.item.type') }}:</span>
+            <span class="ml-2">
+                {{ $type->label() }}
+            </span>
+        </div>
+        <div class="flex flex-row">
             <span>{{ __('texts.story.item.author') }}:</span>
             <span class="ml-2">
                 {{ $author->login }}
@@ -24,7 +30,7 @@
         </div>
         @if ($fandom !== null)
             <div class="flex flex-row">
-                <span>Фандом:</span>
+                <span>{{ __('texts.story.item.fandom') }}:</span>
                 <span class="ml-2">
                     <a href="#">{{ $fandom->name }}</a>
                 </span>
