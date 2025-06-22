@@ -20,7 +20,7 @@ abstract class MenuFactory
             title: $title,
             route: $route,
             icon: $icon,
-            active: $active || Route::is($route.'*'),
+            active: $active || Route::is($route . '*'),
             visible: $visible,
             children: $children
         );

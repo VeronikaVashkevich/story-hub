@@ -63,3 +63,35 @@ Run
 php artisan serve
 npm run dev
 ```
+
+## Static code analysis
+The project uses laravel/pint to format code and larastan to find static errors in code
+
+### Pint
+
+To run pint use this commands:
+
+- Check and fix all files:
+```bash
+./vendor/bin/pint
+```
+
+- Check and fix specific file:
+```bash
+./vendor/bin/pint App\models\User.php
+```
+
+### Larastan
+
+Start analyzing use command:
+
+```bash
+./vendor/bin/phpstan analyse
+```
+
+If you are getting the error `Allowed memory size exhausted`, then you can use
+the `--memory-limit` option fix the problem:
+
+```bash
+./vendor/bin/phpstan analyse --memory-limit=2G
+```

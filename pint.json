@@ -1,0 +1,13 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "binary_operator_spaces": true,
+        "whitespace_after_comma_in_array": true,
+        "cast_spaces": {
+            "space": "single"
+        },
+        "concat_space": {
+            "spacing": "one"
+        }
+    }
+}
