@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -10,7 +11,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
+    /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
     /**
@@ -47,11 +48,17 @@ class User extends Authenticatable
         ];
     }
 
+    /**
+     * @return HasMany<Story, $this>
+     */
     public function stories(): HasMany
     {
         return $this->hasMany(Story::class);
     }
 
+    /**
+     * @return HasMany<Like, $this>
+     */
     public function likes(): HasMany
     {
         return $this->hasMany(Like::class);

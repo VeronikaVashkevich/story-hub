@@ -7,7 +7,9 @@ use App\Enums\StoryRating;
 use App\Enums\StorySize;
 use App\Enums\StoryStatus;
 use App\Enums\StoryType;
+use App\Models\Character;
 use App\Models\Fandom;
+use App\Models\Tag;
 use App\Models\User;
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -16,6 +18,20 @@ use Illuminate\View\Component;
 
 class Story extends Component
 {
+    /**
+     * @param StoryType $type
+     * @param string $name
+     * @param string $description
+     * @param StoryStatus $status
+     * @param StoryDirection $direction
+     * @param StoryRating $rating
+     * @param StorySize $size
+     * @param string|null $cover
+     * @param Fandom|null $fandom
+     * @param Collection<int, Tag> $tags
+     * @param Collection<int, Character> $characters
+     * @param User $author
+     */
     public function __construct(
         public StoryType $type,
         public string $name,

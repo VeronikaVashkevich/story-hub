@@ -8,6 +8,15 @@ abstract class MenuFactory
 {
     abstract public function create(): Menu;
 
+    /**
+     * @param string $title
+     * @param string $route
+     * @param string $icon
+     * @param bool $active
+     * @param bool $visible
+     * @param array<int, MenuItem> $children
+     * @return MenuItem
+     */
     protected function createMenuItem(
         string $title,
         string $route,

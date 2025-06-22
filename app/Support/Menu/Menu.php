@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 
 class Menu
 {
-    /** @var Collection<MenuItem> */
+    /** @var Collection<int, MenuItem> */
     private Collection $items;
 
     public function __construct()
@@ -21,7 +21,10 @@ class Menu
         return $this;
     }
 
-    public function getItems(): Collection
+    /**
+     * @return Collection<int, MenuItem>
+     */
+    public function getItems()
     {
         return $this->items->filter(fn (MenuItem $item) => $item->isVisible());
     }

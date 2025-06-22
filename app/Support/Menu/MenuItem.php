@@ -4,6 +4,14 @@ namespace App\Support\Menu;
 
 readonly class MenuItem
 {
+    /**
+     * @param string $title
+     * @param string $route
+     * @param string $icon
+     * @param bool $active
+     * @param bool $visible
+     * @param array<int, MenuItem> $children
+     */
     public function __construct(
         public string $title,
         public string $route,
