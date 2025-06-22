@@ -14,7 +14,7 @@
     <x-header/>
     <div class="mt-4 flex">
         <x-left-menu/>
-        <div class="ml-3">
+        <div class="ml-5">
             @yield('content')
         </div>
     </div>
