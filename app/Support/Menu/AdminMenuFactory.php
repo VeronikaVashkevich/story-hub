@@ -6,7 +6,7 @@ class AdminMenuFactory extends MenuFactory
 {
     public function create(): Menu
     {
-        $menu = new Menu;
+        $menu = new Menu();
 
         //        $menu->add($this->createMenuItem(
         //            title: 'Пользователи',

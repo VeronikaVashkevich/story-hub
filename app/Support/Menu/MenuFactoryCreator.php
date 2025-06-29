@@ -18,6 +18,5 @@ class MenuFactoryCreator
         }
 
         return Auth::check() ? app(UserMenuFactory::class) : app(GuestMenuFactory::class);
-
     }
 }

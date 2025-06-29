@@ -65,7 +65,8 @@ npm run dev
 ```
 
 ## Static code analysis
-The project uses laravel/pint to format code and larastan to find static errors in code
+The project uses laravel/pint to format code, larastan to find static error in code and phpinsights
+to analyze code quality
 
 ### Pint
 
@@ -95,3 +96,15 @@ the `--memory-limit` option fix the problem:
 ```bash
 ./vendor/bin/phpstan analyse --memory-limit=2G
 ```
+
+### PHP Insights
+
+To start analysis use command:
+
+```bash
+php artisan insights
+```
+
+After finish, it will ask you to press `Enter` to show details.
+
+Use `config/insights.php` file to configure checking process.

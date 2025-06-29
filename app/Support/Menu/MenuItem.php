@@ -28,8 +28,7 @@ readonly class MenuItem
 
     public function isVisible(): bool
     {
-        return
-            $this->visible
+        return $this->visible
             && (
                 $this->children === []
                 || collect($this->children)->contains(fn ($child) => $child->isVisible())
